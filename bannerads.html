@@ -1,0 +1,28 @@
+<!doctype html>
+<!--bannerads.html               Nancy Frutis-->
+<!--This page displays banner ads that rotate at regular intervals.-->
+<!--===============================================================-->
+
+<html>
+<head>
+<title> Rotate Random Banner Ads </title>
+<script type="text/javascript"> function SelectAd()
+//Assumes: the banners QU0.gif, QU1.gif, QU2.gif, and QU3.gif are 
+// stored in Sandbox
+// Results: displays the next banner ad image in the page 
+{
+adNum=Math.floor(4*Math.random());
+document.getElementById('adImg').src=
+'QU'+adNum+'.gif';
+}
+</script>
+</head>
+
+<body onload="setInterval('SelectAd(5)',1000);">
+<div style="text-align:center">
+<img id="adImg" alt="banner ad" src="ad0.gif">
+</div>
+<p>Contents of the page.
+</p>
+</body>
+</html>
